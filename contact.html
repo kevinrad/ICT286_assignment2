@@ -2,33 +2,51 @@
 <html lang=	"en" xmlns- "http://www.3.org/1999/xhtml">
 	<head>
 		<title>Contact Us</title>
-		<link rel="stylesheet" type="text/css" href="style1.css"/>
+		<link rel="stylesheet" type="text/css" href="css/style1.css" />
 	</head>
 	<body>
 		<div id="container">
-			<div id="header">
-				<h1>Laptops Galore</h1>
-			
-				<div id="nav">
-					<ul>
-						<li><a href="index.php">Home</a></li>
-						<li><a href="about.html">About</a></li>
-						<li><a href="contact.html">Contact</a></li>
-					</ul>
-				</div>
-			</div>
+			<header>																		<!-- Header contains logo which onclick takes you to homepage-->
+				<a href="index.html"><img src="images/logo.jpg" alt ="Logo" class="logo">
+			</header>
+
+			<ul class="nav">																		<!-- Navagation bar-->
+				<li class="nav"><a href="index.html">Home</a></li>
+				<li class="nav"><a href="products.html">Products</a></li>
+				<li class="nav"><a href="about.html">About</a></li>
+				<li class="nav"><a href="contact.html">Contact</a></li>
+				<li class="nav"><a href="myaccount.php">My Account</a></li>
+			</ul>
 		  
+			<form class="SearchBox">												<!-- A form for Search box -->
+				<input type="text" placeholder ="Search Site">
+				<button>Search</button>
+			</form>
+			
 			<div id="body">
-			
-			</div>
-		  
-			<div id="footer">
-				<img src="" alt="css" />
-				<img src="" alt="html" />
-			  
-				<div id="sitemap">
-					<h3>Site Map</h3>
+				<div class="contact">
+					<h2 class="contacth2">Western Australia</h2>
+					<h3 class="contacth3">Perth</h3>
+					<br />
+					Address: 90 South Street, Murdoch WA
+					<br /><br />
+					Ph: (08) 9876 1234 Fax: <br />(08) 9876 1235
+					<br /><br />
+					Opening Hours:
+					<br />
+					Monday to Friday 8:30 am - 6pm
+					<br />
+					Saturday 10am - 2pm
+					<br />
+					Sunday Closed
+					<br /><br />
+					<a href="mailto:laptops@galore.com.au">laptops@galore.com.au</a>
 				</div>
+			</div>
+			
+			<div id="footer">
+				Copyright &copy; 2017. laptops galore inc.
+				<img src="images/vcss.gif" alt="vcss_validation" class="vcss" />
 			</div>
 		</div>
 	</body>
