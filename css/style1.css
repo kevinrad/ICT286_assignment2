@@ -1,5 +1,10 @@
 body{
 	background:gray;
+	margin-top:0px;
+	margin-left:-40px;
+	margin-right:-40px;
+	padding-right:0px;
+
 	font-family: Verdana, Geneva, sans-serif;
 }
 
@@ -7,12 +12,14 @@ header{
 	background-color:maroon;
 	padding:4px;
 	height:150px;
+	overflow:hidden;
 
 }
 #container{
 	background:black;
 	width: 95%;
 	margin:0 auto;
+	overflow:hidden;
 }
 .logo{
 	width: 300px;
@@ -22,7 +29,7 @@ header{
 }
 ul.nav{
 	list-style-type: none;
-	margin: 0px;
+	margin-left:150px;
 	padding: 0;
 	line-height:60px;
 	overflow: hidden;
@@ -31,11 +38,16 @@ li.nav{
 	float:left;
 }
 #body{
-	color: white;
+	background:black;
+	width: 95%;
+	margin:0 auto;
 	width: 70%;
-	margin: auto;
+	margin-top:-20px;
+	padding-left:250px;
+	padding-right:107px;
 	padding-bottom: 40px;
-	padding-top: 30px;
+	padding-top: 50px;
+	overflow:hidden;
 }
 ul.awards{
 	color: gold;
@@ -44,10 +56,11 @@ li.l{
 	padding: 4px;
 }
 p{
+	color:white;
 	padding: 3px;
 }
 .SearchBox{
-	margin-top:-50px;
+	margin-top:-65px;
 	float:right;
 	margin-right:100px;
 }
@@ -62,6 +75,9 @@ input[type=text]{
 	background-color: maroon;
 	color: white;
 	text-align: right;
+	margin-top:0px;
+	margin-right:36px;
+	margin-left:40px;
 }
 .vcss{
 	max-height: 18px;
@@ -94,7 +110,7 @@ button{
 	border:none;
 	font-size:16px;
 }
-a:link, a:visited{
+.logoo:link, .logoo:visited{
 	display: inline-block;
 	font-size:18px;
 	front-weight: bold;
@@ -106,7 +122,8 @@ a:link, a:visited{
 	text-transform: uppercase;
 	text-decoration;none;
 }
-a:hover, a:active{
+.logoo:hover, .logoo:active{
 	background-color:gray;
 	font-style:Bold;
 }
+
