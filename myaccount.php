@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <?php
-	include('php/connect.php');
 	include('php/session.php');
 ?>
 <html lang=	"en" xmlns- "http://www.3.org/1999/xhtml">
@@ -29,7 +28,7 @@
 			
 			<div id="body">
 				<legend>My Account Info</legend><br />
-				<button onclick="php/logout.php">Logout</button>
+				<a class="logout" href = "php/logout.php">Logout</a>
 				<?php
 					$username = $_SESSION['login_user'];
 							
@@ -49,7 +48,7 @@
 							echo "<p>Name: " . $line['name'] . "<br />" . "Username: " . $line['username'] . "<br />" . "Address: " . $line['address'] . "<br />" . "Phone Number: " . $line['phone'] . "<br />" . "Email: " . $line['email'] . "<br />" . "Gender: " . $line['gender'] . "<br />" . "Type of Registration: " . $line['UserType'] . "</p>";
 						}
 						
-						$query = "SELECT UserType FROM users WHERE username='$username';";
+						$query = "SELECT usertype FROM users WHERE username='$username';";
 						$result = mysqli_query($conn, $query);
 						
 						$row = mysqli_fetch_array($result);
@@ -58,7 +57,7 @@
 						{
 							echo "Hi Admin!<br>";
 							?>
-								<button onclick="add.html">Add Product</button>
+								<a class="add" href ="add.html">Add a Product</a>
 							<?php
 						}
 					}

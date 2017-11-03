@@ -32,7 +32,7 @@
 					<input type="text" id="last_name" name="last_name" placeholder="Last Name" /></br>
 					<input type="text" id="username" name="username" placeholder="Username" /></br>
 					<input type="text" id="phone" name="phone" placeholder="Phone Number" /></br>
-					<input type="text" id="email" name="email" placeholder="Someone@example.com" /></br>
+					<input type="text" id="email" name="email" placeholder="Email" /></br>
 					<input type="text" id="addr" name="addr" placeholder="Full Address" /></br>
 					<input type="password" id="password" name="pass" placeholder="Password" /></br>
 					<input type="password" id="password" name="repass" placeholder="Retype password" /></br>
