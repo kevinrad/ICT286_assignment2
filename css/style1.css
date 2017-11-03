@@ -53,6 +53,20 @@ p{
 	color:white;
 	padding: 3px;
 }
+img.employee{
+	max-height: 150px;
+	border-radius: 10px;
+	padding-bottom: 15px;
+}
+.home_p{
+	float: right;
+	margin: auto;
+	width: 70%;
+}
+.employee_heading{
+	font-size: 30px;
+	color: gold;
+}
 .SearchBox{
 	margin-top:-65px;
 	float:right;
