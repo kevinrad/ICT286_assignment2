@@ -11,7 +11,7 @@
 			</header>
 			
 			<ul class="nav">																		<!-- Navagation bar-->
-				<li class="nav"><a href="index.php" class="logoo">Home</a></li>
+				<li class="nav"><a href="index.html" class="logoo">Home</a></li>
 				<li class="nav"><a href="products.php" class="logoo">Products</a></li>
 				<li class="nav"><a href="about.html" class="logoo">About</a></li>
 				<li class="nav"><a href="contact.html" class="logoo">Contact</a></li>
