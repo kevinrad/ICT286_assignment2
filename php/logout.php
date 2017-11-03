@@ -1,9 +1,7 @@
-<!DOCTYPE html>
 <?php
-	session_start();
+   session_start();
    
-	if(session_destroy())
-	{
-	   header("Location: signin.html");
-	}
+   if(session_destroy()) {
+      header("Location: ../signin.html");
+   }
 ?>
