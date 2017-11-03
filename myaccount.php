@@ -1,16 +1,19 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
+<?php
+	include('php/connect.php');
+	include('php/session.php');
+?>
 <html lang=	"en" xmlns- "http://www.3.org/1999/xhtml">
 	<head>
-		<title>Contact Us</title>
+		<title>My Account</title>
 		<link rel="stylesheet" type="text/css" href="css/style1.css" />
-		<link rel="stylesheet" type="text/css" href="css/SignIn.css" />
 	</head>
 	<body>
 		<div id="container">
 			<header>																		<!-- Header contains logo which onclick takes you to homepage-->
-				<a href="index.html" class="logoo"><img src="images/logo.jpg" alt ="Logo" class="logo"></a>
+				<a href="index.html"><img src="images/logo.jpg" alt ="Logo" class="logo">
 			</header>
-		
+			
 			<ul class="nav">																		<!-- Navagation bar-->
 				<li class="nav"><a href="index.php" class="logoo">Home</a></li>
 				<li class="nav"><a href="products.php" class="logoo">Products</a></li>
@@ -18,27 +21,52 @@
 				<li class="nav"><a href="contact.html" class="logoo">Contact</a></li>
 				<li class="nav"><a href="myaccount.php" class="logoo">My Account</a></li>
 			</ul>
+			
 			<form class="SearchBox">												<!-- A form for Search box -->
-				<input type="text" placeholder ="Search Product">
-				<button>Search</button>
+				<input type="text" placeholder ="Search Site">
+				<button class="search">Search</button>
 			</form>
 			
-		</div>
+			<div id="body">
+				<legend>My Account Info</legend><br />
+				<button onclick="php/logout.php">Logout</button>
+				<?php
+					$username = $_SESSION['login_user'];
+							
+					$query = "SELECT username, name, phone, email, address, gender, UserType FROM users WHERE username='$username';";
+					$result = mysqli_query($conn, $query);
+					
+					if (!$result)
+					{
+						print "Error - the query could not be executed";
+						var_dump($result);
+						exit;
+					}
+					else
+					{
+						while ($line = mysqli_fetch_array($result))
+						{
+							echo "<p>Name: " . $line['name'] . "<br />" . "Username: " . $line['username'] . "<br />" . "Address: " . $line['address'] . "<br />" . "Phone Number: " . $line['phone'] . "<br />" . "Email: " . $line['email'] . "<br />" . "Gender: " . $line['gender'] . "<br />" . "Type of Registration: " . $line['UserType'] . "</p>";
+						}
+						
+						$query = "SELECT UserType FROM users WHERE username='$username';";
+						$result = mysqli_query($conn, $query);
+						
+						$row = mysqli_fetch_array($result);
+						
+						if($row['usertype']=='admin')
+						{
+							echo "Hi Admin!<br>";
+							?>
+								<button onclick="add.html">Add Product</button>
+							<?php
+						}
+					}
+					mysqli_free_result($result);
+					mysqli_close($conn);
+				?>
+			</div>
 			
-		<div id="inner-body">
-					<form method="POST" action="">
-				<div class="form-style-8">
-					<h2>LOG IN</h2>
-	 
-						<input type="text" id="name" name="Username" placeholder="Username" />
-						<input type="password" id="password" name="Password" placeholder="Password" />
-						<input type="button" onclick="" value="Login" />
-					<p>Dont have an account?  	<a href="Signup_source.php">Signup</a> <p>    
-	  
-				</div>
-			</form>
-
-		</div>
 			<div id="footer">
 				Copyright &copy; 2017. laptops galore inc.
 				<img src="images/vcss.gif" alt="vcss_validation" class="vcss" />

@@ -1,7 +1,7 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang=	"en" xmlns- "http://www.3.org/1999/xhtml">
 	<head>
-		<title>Laptops Galore</title>
+		<title>Laptops Galore Home</title>
 		<link rel="stylesheet" type="text/css" href="css/style1.css" />
 	</head>
 	<body >
@@ -20,9 +20,13 @@
 			
 			<form class="SearchBox">												<!-- A form for Search box -->
 				<input type="text" placeholder ="Search Product">
-				<button>Search</button>
+				<button class="search">Search</button>
 			</form>
+			
+			<div id="body">
+				
 			</div>
+			
 			<div id="footer">
 				Copyright &copy; 2017. laptops galore inc.
 				<img src="images/vcss.gif" alt="vcss_validation" class="vcss" />
