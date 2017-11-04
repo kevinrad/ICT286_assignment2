@@ -1,8 +1,8 @@
 <?php
 	$host="localhost";
-	$dbuser="X32237834";
-	$pass="X32237834";
-	$dbname="X32237834";
+	$dbuser="X32524795";
+	$pass="X32524795";
+	$dbname="X32524795";
 	$conn = mysqli_connect($host, $dbuser, $pass, $dbname);
 	if(mysqli_connect_errno())
 	{
