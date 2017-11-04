@@ -58,16 +58,6 @@
 	cursor:pointer;
 	margin-left:200px;
 }
-.form-style-8 input[type="reset"]{
-    background-color: #2CBBBB;
-    border: 1px solid #27A0A0;
-    color: #FFFFFF;
-    font-family: 'Open Sans Condensed', sans-serif;
-    font-size: 14px;
-    padding: 8px 18px;
-    text-decoration: none;
-	cursor:pointer;
-}
 .form-style-8 a{
 	background-color: #2CBBBB;
     border: 1px solid #27A0A0;
@@ -78,7 +68,4 @@
     padding: 8px 18px;
     text-decoration: none;
 	cursor:pointer;
-}
-.form-style-8-1{
-	text-align: center;
 }
